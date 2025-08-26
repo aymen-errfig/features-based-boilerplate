@@ -1,7 +1,7 @@
 "use client"
 
 import {useTodos} from "@/features/todo/hooks/use-todos";
-import {DivEmpty, DivError, DivStatus, DivSuccess} from "@/components/global/div_status";
+import {DivEmpty, DivError, DivList, DivStatus} from "@/components/global/div_status";
 
 export default function Home() {
     const {
@@ -16,13 +16,9 @@ export default function Home() {
             <h1>Todo List Example</h1>
             <div className={"rounded-sm border "}>
                 <DivStatus value={{loading: todosLoading, error: todosError, success: todosSuccess, empty: false}}>
-                    <DivSuccess>
-                        <div>{
-                            todos?.map((item) => (
-                                <div key={item.id}>{item.title}</div>
-                            ))
-                        }</div>
-                    </DivSuccess>
+                    <DivList data={todos!} renderItem={
+                        (item) => <p>{item.title}</p>
+                    }/>
                     <DivError>
                         <div>error occurred</div>
                     </DivError>
