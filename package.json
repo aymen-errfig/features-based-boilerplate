@@ -11,12 +11,19 @@
     "server": "json-server --watch mock/db.json --port 3001"
   },
   "dependencies": {
+    "@radix-ui/react-checkbox": "^1.3.3",
+    "@radix-ui/react-slot": "^1.2.3",
     "@tanstack/react-query": "^5.85.5",
     "axios": "^1.11.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "json-server": "^1.0.0-beta.3",
+    "lucide-react": "^0.542.0",
     "next": "15.4.5",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react": "^0.0.0-experimental-67a44bcd-20250915",
+    "react-dom": "^0.0.0-experimental-67a44bcd-20250915",
+    "shadcn": "^3.0.0",
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -27,6 +34,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.4.5",
     "tailwindcss": "^4",
+    "tw-animate-css": "^1.3.7",
     "typescript": "^5"
   }
 }

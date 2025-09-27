@@ -1,45 +1,47 @@
-import React from "react";
+import React, {JSX} from "react";
 import {StatusContext, StatusData} from "@/context/status-context";
 import {useStatus} from "@/hooks/use-status";
 
-const DivLoading: React.FC<{ children: React.ReactNode }>
-    = ({children}) => {
-    const {loading} = useStatus();
-    return loading ? <>{children}</> : null;
-}
+type StatusComponent = React.FC<{ value: StatusData; children: React.ReactNode }> & {
+    Loading: React.FC<{ children: React.ReactNode }>;
+    Error: React.FC<{ children: React.ReactNode }>;
+    Success: React.FC<{ children: React.ReactNode }>;
+    Empty: React.FC<{ children: React.ReactNode }>;
+    List: <T>(props: {
+        data: T[];
+        renderItem: (item: T, index: number) => React.ReactNode;
+    }) => JSX.Element | null;
+};
 
-const DivError: React.FC<{ children: React.ReactNode }>
-    = ({children}) => {
-    const {error} = useStatus();
-    return error ? <>{children}</> : null;
-}
-
-function DivList<T>({
-                        data,
-                        renderItem,
-                    }: {
-    data: T[];
-    renderItem: (item: T) => React.ReactNode;
-}) {
-    return <>{data.map((item) => renderItem(item))}</>;
-}
-
-const DivSuccess: React.FC<{ children: React.ReactNode }>
-    = ({children}) => {
-    const {success} = useStatus();
-    return success ? <>{children}</> : null;
-}
-
-const DivEmpty: React.FC<{ children: React.ReactNode }>
-    = ({children}) => {
-    const {empty} = useStatus();
-    return empty ? <>{children}</> : null;
-}
-
-const DivStatus: React.FC<{ value: StatusData; children: React.ReactNode }> = ({value, children}) => {
+export const Status: StatusComponent = ({value, children}) => {
     const memoValue = React.useMemo(() => value, [value]);
     return <StatusContext.Provider value={memoValue}>{children}</StatusContext.Provider>;
 };
 
+Status.Loading = function Loading({children}) {
+    const {loading} = useStatus();
+    return loading ? <>{children}</> : null;
+};
 
-export {DivLoading, DivError, DivSuccess, DivEmpty, DivStatus, DivList};
+Status.Error = function Error({children}) {
+    const {error} = useStatus();
+    return error ? <>{children}</> : null;
+}
+
+Status.Success = function Success({children}) {
+    const {success} = useStatus();
+    return success ? <>{children}</> : null;
+}
+
+Status.Empty = function Empty({children}) {
+    const {empty} = useStatus();
+    return empty ? <>{children}</> : null;
+}
+
+Status.List = function List<T>({data, renderItem}: {
+    data: T[];
+    renderItem: (item: T, index: number) => React.ReactNode
+}) {
+    if (!data) return null;
+    return <>{data.map((item, index) => renderItem(item, index))}</>;
+}
