@@ -1,10 +1,9 @@
-import type {NextConfig} from "next";
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-    /* config options here */
-    experimental: {
-        viewTransition: true
-    }
+	/* config options here */
+	reactCompiler: true,
+	cacheComponents: true,
 };
 
 export default nextConfig;

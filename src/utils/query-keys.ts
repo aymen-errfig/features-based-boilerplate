@@ -1,4 +1,4 @@
 export const queryKeys = {
-    todos: ['todos'] as const,
-    todo: (id: string) => ['todos', id] as const,
-}
+	todos: ["todos"] as string[],
+	todo: (id: string) => ["todos", id] as const,
+};

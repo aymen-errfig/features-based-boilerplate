@@ -1,38 +1,73 @@
 // src/providers/ReactQueryProvider.tsx
-'use client';
+"use client";
 
-import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
-import React from 'react';
+import { MutationCache } from "@tanstack/query-core";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import type React from "react";
+import { toast } from "react-toastify";
+
+declare module "@tanstack/react-query" {
+	interface Register {
+		mutationMeta: {
+			invalidatesQueries?: Array<string>;
+			successMessage?: string;
+			errorMessage?: string;
+		};
+	}
+}
+
+const queryClient = new QueryClient({
+	mutationCache: new MutationCache({
+		onSuccess: (_data, _variables, _context, mutation) => {
+			if (mutation.meta?.successMessage) {
+				toast.success(mutation.meta.successMessage);
+			}
+		},
+		onError: (_error, _variables, _context, mutation) => {
+			if (mutation.meta?.errorMessage) {
+				toast.error(mutation.meta.errorMessage);
+			}
+		},
+		onSettled: (_data, _error, _variables, _context, mutation) => {
+			if (mutation.meta?.invalidatesQueries) {
+				queryClient.invalidateQueries({
+					queryKey: mutation.meta.invalidatesQueries,
+				});
+			}
+		},
+	}),
+	defaultOptions: {
+		queries: {
+			staleTime: 60 * 1000, // Example stale time
+			retry: false,
+		},
+	},
+});
 
 function makeQueryClient() {
-    return new QueryClient({
-        defaultOptions: {
-            queries: {
-                staleTime: 60 * 1000, // Example stale time
-                retry: false,
-            },
-        },
-    });
+	return queryClient;
 }
 
-let browserQueryClient: QueryClient | undefined = undefined;
+let browserQueryClient: QueryClient | undefined;
 
 function getQueryClient() {
-    if (typeof window === 'undefined') {
-        // Server: always create a new QueryClient
-        return makeQueryClient();
-    } else {
-        // Browser: use a singleton QueryClient
-        if (!browserQueryClient) browserQueryClient = makeQueryClient();
-        return browserQueryClient;
-    }
+	if (typeof window === "undefined") {
+		// Server: always create a new QueryClient
+		return makeQueryClient();
+	} else {
+		// Browser: use a singleton QueryClient
+		if (!browserQueryClient) browserQueryClient = makeQueryClient();
+		return browserQueryClient;
+	}
 }
 
-export default function ReactQueryProvider({children}: { children: React.ReactNode }) {
-    const queryClient = getQueryClient();
-    return (
-        <QueryClientProvider client={queryClient}>
-            {children}
-        </QueryClientProvider>
-    );
+export default function ReactQueryProvider({
+	children,
+}: {
+	children: React.ReactNode;
+}) {
+	const queryClient = getQueryClient();
+	return (
+		<QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+	);
 }

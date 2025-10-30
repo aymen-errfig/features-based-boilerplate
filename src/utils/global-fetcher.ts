@@ -1,6 +1,6 @@
-import {apiInstance} from "@/api/client";
+import { apiInstance } from "@/api/client";
 
 export const globalFetcher = async (route: string) => {
-    const resp = await apiInstance.get(route);
-    return resp.data;
-}
+	const resp = await apiInstance.get(route);
+	return resp.data;
+};

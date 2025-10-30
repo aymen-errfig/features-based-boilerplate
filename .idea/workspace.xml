@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8edd026c-5533-4568-9c87-c97d15a69ddf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/organisms/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/todo/components/molecules/add-todo-dialog.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/todo/components/molecules/add-todo-form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/todo/organisms/TodoList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/todo-list.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components.json" beforeDir="false" afterPath="$PROJECT_DIR$/components.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create-feature.js" beforeDir="false" afterPath="$PROJECT_DIR$/create-feature.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eslint.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/mock/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/global/div_status.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/global/div_status.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/checkbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/checkbox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/status-context.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/status-context.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/todo/components/molecules/todo-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo/components/molecules/todo-item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/todo/hooks/use-todos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo/hooks/use-todos.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/todo/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/todo/types/todo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo/types/todo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/use-status.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/use-status.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/react-query-provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/react-query-provider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/global-fetcher.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/global-fetcher.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/query-creator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/query-creator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/query-keys.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/query-keys.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="tsconfig.json" />
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="30jOpOYe0M9oNzNxDAzcILnatre" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/aerrfig/projects/OCP-Mine&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/aerrfig/personal-projects/todo-list/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/features/todo/components/molecules" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.26830.93" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8edd026c-5533-4568-9c87-c97d15a69ddf" name="Changes" comment="" />
+      <created>1754137698505</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1754137698505</updated>
+      <workItem from="1754137699841" duration="156000" />
+      <workItem from="1755273929313" duration="2811000" />
+      <workItem from="1755507287823" duration="45000" />
+      <workItem from="1755687459937" duration="729000" />
+      <workItem from="1755959697547" duration="2543000" />
+      <workItem from="1755968081247" duration="2848000" />
+      <workItem from="1755970957177" duration="1024000" />
+      <workItem from="1756110995305" duration="46000" />
+      <workItem from="1756227895549" duration="744000" />
+      <workItem from="1756388236971" duration="24000" />
+      <workItem from="1756390747466" duration="631000" />
+      <workItem from="1756392100694" duration="709000" />
+      <workItem from="1756458482552" duration="543000" />
+      <workItem from="1756459195864" duration="8978000" />
+      <workItem from="1756715746858" duration="14000" />
+      <workItem from="1758015945212" duration="3133000" />
+      <workItem from="1758638677580" duration="142000" />
+      <workItem from="1758638826063" duration="587000" />
+      <workItem from="1758706367288" duration="19000" />
+      <workItem from="1758721788366" duration="2163000" />
+      <workItem from="1758726936598" duration="1007000" />
+      <workItem from="1758798376031" duration="2275000" />
+      <workItem from="1761038065777" duration="1388000" />
+      <workItem from="1761043466537" duration="73000" />
+      <workItem from="1761044227853" duration="1690000" />
+      <workItem from="1761057635740" duration="3290000" />
+      <workItem from="1761127859387" duration="721000" />
+      <workItem from="1761137752315" duration="14000" />
+      <workItem from="1761138654185" duration="1943000" />
+      <workItem from="1761213325518" duration="921000" />
+      <workItem from="1761215064577" duration="1954000" />
+      <workItem from="1761294472341" duration="9203000" />
+      <workItem from="1761555533388" duration="5233000" />
+      <workItem from="1761841870903" duration="2655000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
