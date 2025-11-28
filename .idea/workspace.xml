@@ -13,45 +13,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8edd026c-5533-4568-9c87-c97d15a69ddf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/organisms/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/todo/components/molecules/add-todo-dialog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/todo/components/molecules/add-todo-form.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/todo/organisms/TodoList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/todo-list.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components.json" beforeDir="false" afterPath="$PROJECT_DIR$/components.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create-feature.js" beforeDir="false" afterPath="$PROJECT_DIR$/create-feature.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eslint.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/mock/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/re-invent/use-memo.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/optimistic-mutation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postcss.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/global/div_status.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/global/div_status.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/checkbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/checkbox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/status-context.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/status-context.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/todo/components/molecules/todo-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo/components/molecules/todo-item.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/todo/hooks/use-todos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo/hooks/use-todos.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/todo/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/todo/types/todo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo/types/todo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/use-status.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/use-status.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/providers/react-query-provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/react-query-provider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/global-fetcher.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/global-fetcher.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/query-creator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/query-creator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/query-keys.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/query-keys.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +35,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="tsconfig.json" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -139,7 +108,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.26830.93" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.27397.92" />
       </set>
     </attachedChunks>
   </component>
@@ -184,6 +153,9 @@
       <workItem from="1761294472341" duration="9203000" />
       <workItem from="1761555533388" duration="5233000" />
       <workItem from="1761841870903" duration="2655000" />
+      <workItem from="1764234816578" duration="12000" />
+      <workItem from="1764238091362" duration="5778000" />
+      <workItem from="1764322885603" duration="11872000" />
     </task>
     <servers />
   </component>
@@ -200,5 +172,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

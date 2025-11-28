@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 declare module "@tanstack/react-query" {
 	interface Register {
 		mutationMeta: {
-			invalidatesQueries?: Array<string>;
+			queryKeys?: Array<string>;
 			successMessage?: string;
 			errorMessage?: string;
 		};
@@ -29,9 +29,9 @@ const queryClient = new QueryClient({
 			}
 		},
 		onSettled: (_data, _error, _variables, _context, mutation) => {
-			if (mutation.meta?.invalidatesQueries) {
+			if (mutation.meta?.queryKeys) {
 				queryClient.invalidateQueries({
-					queryKey: mutation.meta.invalidatesQueries,
+					queryKey: mutation.meta.queryKeys,
 				});
 			}
 		},

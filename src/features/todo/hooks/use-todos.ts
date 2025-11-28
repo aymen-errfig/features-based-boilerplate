@@ -1,9 +1,10 @@
 "use client";
 
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiInstance } from "@/api/client";
 import type { Todo, TodoForm } from "@/features/todo/types/todo";
 import { globalFetcher } from "@/utils/global-fetcher";
+import { useOptimisticMutation } from "@/utils/optimistic-mutation";
 import { createQueryHook } from "@/utils/query-creator";
 import { queryKeys } from "@/utils/query-keys";
 
@@ -21,21 +22,38 @@ export const useTodos = () => {
 		refetch: todosRefetch,
 	} = useTodosFetch();
 
-	const { mutate: addTodo, isPending: adding_todo } = useMutation({
-		mutationFn: (todo: TodoForm) => apiInstance.post("/todo_list", todo),
+	const queryClient = useQueryClient();
+	const { mutate: addTodo, isPending: adding_todo } = useOptimisticMutation({
 		meta: {
 			successMessage: "added new todo",
 			errorMessage: "failed to add new todo",
-			invalidatesQueries: queryKeys.todos,
+			queryKeys: queryKeys.todos,
+		},
+		optimistics: {
+			mode: "add",
+			mutationFn: async (data) => {
+				await apiInstance.post("/todo_list", data);
+			},
 		},
 	});
 
 	const { mutate: deleteTodo, isPending: deleting_todo } = useMutation({
 		mutationFn: (id: number) => apiInstance.delete(`/todo_list/${id}`),
+		onMutate: async (id) => {
+			await queryClient.cancelQueries({ queryKey: queryKeys.todos });
+
+			const prevTodos: Todo[] = queryClient.getQueryData(queryKeys.todos) || [];
+
+			queryClient.setQueryData(queryKeys.todos, [
+				...prevTodos.filter((todos) => todos.id !== id, [id]),
+			]);
+
+			return { prevTodos };
+		},
 		meta: {
 			successMessage: "deleted todo successfully",
 			errorMessage: "failed to delete todo",
-			invalidatesQueries: queryKeys.todos,
+			queryKeys: queryKeys.todos,
 		},
 	});
 
@@ -43,7 +61,7 @@ export const useTodos = () => {
 		mutationFn: ({ id, state }: { id: number; state: boolean }) =>
 			apiInstance.patch(`/todo_list/${id}`, { done: state }),
 		meta: {
-			invalidatesQueries: queryKeys.todos,
+			queryKeys: queryKeys.todos,
 		},
 	});
 
